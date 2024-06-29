@@ -1,7 +1,8 @@
-from fastapi import status, APIRouter
+from fastapi import status, APIRouter,Depends
 from ..schemas import Client
 from ..config import clients_collection
 from bson import ObjectId
+from ..Oath2 import get_current_user
 
 router = APIRouter(
     prefix = "/clients",
@@ -9,8 +10,9 @@ router = APIRouter(
 )
 
 @router.get("/")
-def get_clients():
+def get_clients(current_user: int = Depends(get_current_user)):
 
+    print(current_user)
     clients = list(clients_collection.find())
     for client in clients:
         client["_id"] = str(client["_id"])
