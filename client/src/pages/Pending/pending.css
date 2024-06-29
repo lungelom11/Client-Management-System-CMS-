@@ -1,0 +1,45 @@
+.client-info {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.client-details {
+  display: flex;
+  padding: 15px;
+  border: 1px solid gray;
+  margin: 1rem 0;
+  justify-content: space-between;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* .client-details:hover {
+    background-color: #3030b8;
+    color: white;
+  } */
+
+.client-details input {
+  width: 25px;
+  height: 25px;
+}
+
+.btn {
+  padding: 17px 12px;
+  border-radius: 20px;
+  color: whitesmoke;
+  border: 2px solid #e69410;
+  width: 150px;
+  background-color: #e69410;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+.btn:hover {
+  color: #e69410;
+  background-color: transparent;
+}
+
+.selected {
+  background-color: #151fea;
+  color: #fff;
+}

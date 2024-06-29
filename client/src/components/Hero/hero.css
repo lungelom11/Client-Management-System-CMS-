@@ -1,0 +1,30 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  height: calc(100vh - 70px);
+}
+
+.catch {
+  color: #e69410;
+}
+
+.hero-btn {
+  padding: 17px 12px;
+  border-radius: 20px;
+  color: whitesmoke;
+  border: 2px solid #e69410;
+  width: 150px;
+  background-color: #e69410;
+  cursor: pointer;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  text-align: center;
+}
+.hero-btn:hover {
+  background-color: aliceblue;
+  color: #e69410;
+}
