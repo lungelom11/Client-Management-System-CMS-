@@ -10,6 +10,8 @@ const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const initialRef = useRef(null);
   const finalRef = useRef(null);
+  const token = localStorage.getItem("token");
+
   return (
     <>
       <div className="nav-container">
@@ -28,9 +30,18 @@ const Navbar = () => {
               </li>
               <li>About</li>
               <li>
-                <button className="login-btn" onClick={onOpen}>
-                  Login
-                </button>
+                {token ? (
+                  <div className="pro_img">
+                    <img
+                      src="https://i.imgur.com/rgiY5VZ.png"
+                      alt="profile_picture"
+                    />
+                  </div>
+                ) : (
+                  <button className="login-btn" onClick={onOpen}>
+                    Login
+                  </button>
+                )}
               </li>
               <Modal
                 initialFocusRef={initialRef}

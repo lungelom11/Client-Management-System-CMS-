@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./sidebar.css";
 
 const Sidebar = () => {
   const [isActive, setIsActive] = useState(false);
+  const location = useLocation();
 
   const toggleSection = () => {
     setIsActive(!isActive);
@@ -14,7 +15,6 @@ const Sidebar = () => {
       href: "/dashboard",
       iconClass: "fa-regular fa-building",
       text: "Home",
-      isActive: true,
     },
     {
       href: "/active",
@@ -61,7 +61,12 @@ const Sidebar = () => {
           <ul>
             {navigationLinks.map((link, index) => (
               <li key={index}>
-                <Link to={link.href} className={link.isActive ? "active" : ""}>
+                <Link
+                  to={link.href}
+                  className={
+                    location.pathname === link.href ? "active-page" : ""
+                  }
+                >
                   <span className="icon">
                     <i className={link.iconClass} />
                   </span>

@@ -140,3 +140,7 @@ section.active .sidebar ul li a .count {
 ul {
   padding-left: 0px;
 }
+
+.active-page {
+  background-color: #e69410;
+}

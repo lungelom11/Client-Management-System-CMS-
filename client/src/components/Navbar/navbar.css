@@ -48,3 +48,11 @@ nav {
   color: black;
   font-size: 1rem;
 }
+
+.pro_img {
+  width: 50px;
+}
+
+.pro_img img {
+  width: 100%;
+}

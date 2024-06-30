@@ -1,4 +1,4 @@
-from fastapi import status, APIRouter
+from fastapi import status, APIRouter,HTTPException
 from ..schemas import  Admin, AdminLogin
 from ..config import admin_collection
 from ..utils import hash, verify
@@ -16,7 +16,7 @@ def login(user_credentials: AdminLogin):
 
     if not user:
         raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN, detail=f"User does not exist")
+            status_code=status.HTTP_404_NOT_FOUND, detail=f"User does not exist")
 
     if not verify(user_credentials.password, user["password"]):
         raise HTTPException(
