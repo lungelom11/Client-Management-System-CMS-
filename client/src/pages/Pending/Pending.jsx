@@ -32,7 +32,7 @@ const Pending = () => {
   }
 
   return (
-    <>
+    <div className="pending-container">
       <h1 style={{ textAlign: "center" }}>Pending Clients </h1>
       <div className="client-info">
         {clientInfo.map((client) => (
@@ -55,7 +55,7 @@ const Pending = () => {
         ))}
         <button className="btn">Register Client</button>
       </div>
-    </>
+    </div>
   );
 };
 
