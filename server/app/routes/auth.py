@@ -1,6 +1,6 @@
 from fastapi import status, APIRouter,HTTPException
-from ..schemas import  Admin, AdminLogin
-from ..config import admin_collection
+from ..schemas import  AdminLogin
+from ..database import admin_collection
 from ..utils import hash, verify
 from bson import ObjectId
 from ..Oath2 import create_access_token

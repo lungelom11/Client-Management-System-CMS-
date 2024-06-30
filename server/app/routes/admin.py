@@ -1,6 +1,6 @@
 from fastapi import status, APIRouter
 from ..schemas import  Admin
-from ..config import admin_collection
+from ..database import admin_collection
 from ..utils import hash
 from bson import ObjectId
 

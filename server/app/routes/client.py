@@ -1,6 +1,6 @@
 from fastapi import status, APIRouter,Depends
 from ..schemas import Client
-from ..config import clients_collection
+from ..database import clients_collection
 from bson import ObjectId
 from ..Oath2 import get_current_user
 

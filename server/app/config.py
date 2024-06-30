@@ -1,12 +1,14 @@
+from pydantic_settings import BaseSettings
 
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
+class Settings(BaseSettings):
+    database_password: str
+    database_username: str
+    secret_key: str
+    algorithm: str
+    access_token_expire_minutes: int
 
-uri = "mongodb+srv://lungelomkhwemte11:k4vy74kN0PutPWwv@dabs-fullstack.zvwtzb9.mongodb.net/?retryWrites=true&w=majority&appName=dabs-fullstack"
+    class Config:
+        env_file = ".env"
 
-# Create a new client and connect to the server
-client = MongoClient(uri, server_api=ServerApi('1'))
 
-db = client.cms
-clients_collection = db["clients"]
-admin_collection = db["admin"]
+settings = Settings()
