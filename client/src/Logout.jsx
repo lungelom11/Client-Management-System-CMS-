@@ -10,9 +10,9 @@ const Logout = () => {
     localStorage.removeItem("token"); // Remove the token
     if (!toastIdRef.current) {
       toastIdRef.current = toast({
-        title: "Unauthorized Access",
-        description: "Please log in to access this page.",
-        status: "error",
+        title: "Logged out successfully",
+        description: "Redirecting to home page",
+        status: "success",
         duration: 5000,
         isClosable: true,
       });

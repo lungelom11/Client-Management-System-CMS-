@@ -1,5 +1,9 @@
+.pending-container {
+  width: 100%;
+}
+
 .client-info {
-  margin: 1rem auto;
+  margin: 1rem;
   text-align: center;
 }
 

@@ -33,7 +33,6 @@ const LoginForm = ({ initialRef }) => {
         email,
         password,
       });
-      console.log(response.data);
       const { access_token } = response.data;
       localStorage.setItem("token", access_token); // Store the token
       // Redirect to protected route
