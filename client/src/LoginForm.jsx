@@ -45,11 +45,7 @@ const LoginForm = ({ initialRef }) => {
         isClosable: true,
       });
     } catch (err) {
-      if (err.response.status == 404) {
-        setError("User doesn't exist");
-      } else if (err.response.status == 403) {
-        setError("Invalid login credentials");
-      }
+      console.log(err)
     }
   };
   return (

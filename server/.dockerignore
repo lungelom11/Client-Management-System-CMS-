@@ -1,0 +1,7 @@
+__pycache__
+*.pyc
+.env
+Dockerfile
+.dockerignore
+*.db
+*.sqlite3
